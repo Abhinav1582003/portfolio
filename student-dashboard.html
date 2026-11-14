@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111019" />
+    <meta name="description" content="A concept dashboard for student and academic management." />
+    <title>Student & Academic Management | Northstar Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="demo-dashboard.css" />
+    <script src="dashboard-app.js" defer></script>
+  </head>
+  <body>
+    <div class="dashboard-shell academic-theme" data-dashboard="academic">
+      <aside class="dashboard-sidebar">
+        <a class="dashboard-brand" href="index.html#projects"><span class="dashboard-brand-mark">N</span><span>Northstar <small>ACADEMY</small></span></a>
+        <span class="sidebar-label">WORKSPACE</span>
+        <nav class="dashboard-nav" aria-label="Dashboard navigation">
+          <a class="active" href="#overview" data-view="overview"><span class="nav-icon">◫</span> Overview</a>
+          <a href="#students" data-view="students"><span class="nav-icon">♙</span> Students <span class="nav-count">—</span></a>
+          <a href="#academics" data-view="academics"><span class="nav-icon">▤</span> Academics</a>
+          <a href="#attendance" data-view="attendance"><span class="nav-icon">◷</span> Attendance</a>
+          <a href="#notices" data-view="notices"><span class="nav-icon">◇</span> Notices <span class="notice-dot"></span></a>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="sidebar-help"><span class="help-icon">?</span><div><b>Need a hand?</b><small>Visit the help center</small></div><span class="help-arrow">↗</span></div>
+          <div class="sidebar-user"><span class="user-avatar">AS</span><span><b>Admin account</b><small>School administrator</small></span><span class="user-more">···</span></div>
+        </div>
+      </aside>
+
+      <main class="dashboard-main" id="overview">
+        <header class="dashboard-topbar">
+          <div class="breadcrumbs">Workspace <span>/</span> <b data-breadcrumb>Overview</b></div>
+          <div class="topbar-actions"><span class="demo-badge"><i></i> DEMO DATA</span><button class="icon-button" type="button" aria-label="Notifications" data-notifications>♧<i></i></button><span class="topbar-avatar">AS</span></div>
+        </header>
+        <div class="dashboard-content" id="dashboard-content" aria-live="polite">
+          <div class="dashboard-heading">
+            <div><p class="dashboard-overline">MONDAY, 18 AUGUST 2025</p><h1>Good morning, Admin <span>✦</span></h1><p>Here’s what’s happening across your school today.</p></div>
+            <a class="dashboard-action" href="index.html#contact">＋ <span>Add student</span></a>
+          </div>
+          <section class="welcome-panel" aria-label="School year summary">
+            <div><span class="welcome-kicker">A GREAT DAY TO MAKE PROGRESS</span><h2>Your school, in sync.</h2><p>Keep students, educators, and learning plans moving forward—all in one place.</p></div>
+            <div class="welcome-art" aria-hidden="true"><div class="welcome-orbit"></div><div class="welcome-book">✦<span>✳</span></div><i class="art-spark spark-a">✦</i><i class="art-spark spark-b">✳</i></div>
+            <div class="school-year"><span>ACADEMIC SESSION</span><b>2025 — 2026</b><small>Term 1 · In progress</small></div>
+          </section>
+
+          <section class="metric-grid" aria-label="School statistics">
+            <article class="metric-card"><span class="metric-icon purple">♙</span><span class="metric-label">Total students</span><strong>1,284</strong><small><b class="positive">↑ 4.8%</b> <span>vs. last session</span></small><div class="metric-spark purple-spark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article class="metric-card"><span class="metric-icon blue">◷</span><span class="metric-label">Attendance today</span><strong>96.8<small>%</small></strong><small><b class="positive">↑ 1.2%</b> <span>vs. last week</span></small><div class="metric-spark blue-spark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article class="metric-card"><span class="metric-icon orange">▤</span><span class="metric-label">Teaching staff</span><strong>42</strong><small><b class="neutral">38</b> <span>classes scheduled</span></small><div class="metric-spark orange-spark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article class="metric-card"><span class="metric-icon green">◇</span><span class="metric-label">Pending actions</span><strong>08</strong><small><b class="attention">Needs attention</b> <span>this week</span></small><div class="metric-spark green-spark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          </section>
+
+          <section class="dashboard-columns">
+            <article class="panel attendance-panel" id="attendance">
+              <div class="panel-heading"><div><h2>Attendance overview</h2><p>Student attendance across this week</p></div><button class="period-select" type="button">This week <span>⌄</span></button></div>
+              <div class="chart-summary"><strong>96.8%</strong><span class="chart-change">↗ 2.4%</span><small>average attendance</small></div>
+              <div class="attendance-chart" role="img" aria-label="Attendance chart: Monday 94%, Tuesday 98%, Wednesday 96%, Thursday 92%, Friday 97%"><div class="chart-guides"><span>100%</span><span>75%</span><span>50%</span><span>25%</span></div><div class="bar-chart"><div class="bar-column"><i style="height:76%"></i><span>MON</span></div><div class="bar-column"><i style="height:88%"></i><span>TUE</span></div><div class="bar-column"><i style="height:83%"></i><span>WED</span></div><div class="bar-column"><i style="height:70%"></i><span>THU</span></div><div class="bar-column"><i style="height:91%"></i><span>FRI</span></div></div></div>
+              <div class="chart-legend"><span><i></i> Present</span><span><i></i> Absent</span><small>Updated 10 min ago</small></div>
+            </article>
+            <article class="panel notices-panel" id="notices">
+              <div class="panel-heading"><div><h2>Today at school</h2><p>Tuesday, 19 August</p></div><a class="panel-more" href="#academics" aria-label="View all events">···</a></div>
+              <div class="today-count"><span class="today-icon">◷</span><div><b>12</b><small>classes in progress</small></div><span class="live-pill"><i></i> LIVE</span></div>
+              <div class="schedule-list" id="academics"><div><span class="schedule-time">09:30</span><i class="schedule-line purple-line"></i><span class="schedule-copy"><b>Morning assembly</b><small>Main courtyard · All grades</small></span></div><div><span class="schedule-time">10:15</span><i class="schedule-line blue-line"></i><span class="schedule-copy"><b>Science exhibition</b><small>Innovation hall · Grades 8–10</small></span></div><div><span class="schedule-time">12:00</span><i class="schedule-line orange-line"></i><span class="schedule-copy"><b>Parent-teacher meet</b><small>Conference room · Grade 6</small></span></div></div>
+              <a class="panel-footer-link" href="#academics">View school calendar <span>↗</span></a>
+            </article>
+          </section>
+
+          <section class="panel students-panel" id="students">
+            <div class="panel-heading"><div><h2>Recently added students</h2><p>Latest student records in your school</p></div><a class="table-link" href="index.html#contact">View all students <span>↗</span></a></div>
+            <div class="table-scroll"><table><thead><tr><th>STUDENT</th><th>STUDENT ID</th><th>CLASS</th><th>ENROLMENT</th><th>STATUS</th></tr></thead><tbody><tr><td><span class="student-cell"><i class="student-avatar avatar-lavender">AM</i><span><b>Aarav Mehta</b><small>aarav.m@example.com</small></span></span></td><td>NS-2025-084</td><td>Grade 8 · A</td><td>12 Aug, 2025</td><td><span class="status-pill status-active">Active</span></td></tr><tr><td><span class="student-cell"><i class="student-avatar avatar-peach">SI</i><span><b>Sara Iyer</b><small>sara.i@example.com</small></span></span></td><td>NS-2025-083</td><td>Grade 6 · B</td><td>11 Aug, 2025</td><td><span class="status-pill status-active">Active</span></td></tr><tr><td><span class="student-cell"><i class="student-avatar avatar-mint">RK</i><span><b>Rohan Kumar</b><small>rohan.k@example.com</small></span></span></td><td>NS-2025-082</td><td>Grade 9 · A</td><td>10 Aug, 2025</td><td><span class="status-pill status-review">Review</span></td></tr></tbody></table></div>
+          </section>
+          <p class="dashboard-disclaimer">Concept dashboard · All names and figures shown are illustrative demo data.</p>
+        </div>
+      </main>
+    </div>
+    <dialog class="record-dialog" id="record-dialog" aria-label="Manage student and academic record"></dialog>
+  </body>
+</html>
