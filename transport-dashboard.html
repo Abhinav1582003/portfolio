@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#111019" />
+    <meta name="description" content="A concept dashboard for school transport and bus management." />
+    <title>Transport & Bus Management | Northstar Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="demo-dashboard.css" />
+    <script src="dashboard-app.js" defer></script>
+  </head>
+  <body>
+    <div class="dashboard-shell transport-theme" data-dashboard="transport">
+      <aside class="dashboard-sidebar">
+        <a class="dashboard-brand" href="index.html#projects"><span class="dashboard-brand-mark">N</span><span>Northstar <small>ACADEMY</small></span></a>
+        <span class="sidebar-label">WORKSPACE</span>
+        <nav class="dashboard-nav" aria-label="Dashboard navigation">
+          <a class="active" href="#overview" data-view="overview"><span class="nav-icon">◫</span> Overview</a>
+          <a href="#vehicles" data-view="vehicles"><span class="nav-icon">▣</span> Vehicles <span class="nav-count">—</span></a>
+          <a href="#routes" data-view="routes"><span class="nav-icon">⌖</span> Routes</a>
+          <a href="#staff" data-view="staff"><span class="nav-icon">♙</span> Drivers & staff</a>
+          <a href="#allocations" data-view="allocations"><span class="nav-icon">◇</span> Student allocation</a>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="sidebar-help"><span class="help-icon">?</span><div><b>Need a hand?</b><small>Visit the help center</small></div><span class="help-arrow">↗</span></div>
+          <div class="sidebar-user"><span class="user-avatar">AS</span><span><b>Admin account</b><small>Transport manager</small></span><span class="user-more">···</span></div>
+        </div>
+      </aside>
+
+      <main class="dashboard-main" id="overview">
+        <header class="dashboard-topbar">
+          <div class="breadcrumbs">Workspace <span>/</span> <b data-breadcrumb>Overview</b></div>
+          <div class="topbar-actions"><span class="demo-badge"><i></i> DEMO DATA</span><button class="icon-button" type="button" aria-label="Notifications" data-notifications>♧<i></i></button><span class="topbar-avatar">AS</span></div>
+        </header>
+        <div class="dashboard-content" id="dashboard-content" aria-live="polite">
+          <div class="dashboard-heading">
+            <div><p class="dashboard-overline">TUESDAY, 19 AUGUST 2025</p><h1>Transport at a glance <span>✦</span></h1><p>Keep every route coordinated and every school journey on track.</p></div>
+            <a class="dashboard-action transport-action" href="index.html#contact">＋ <span>Add vehicle</span></a>
+          </div>
+          <section class="welcome-panel transport-welcome" aria-label="Fleet operations summary">
+            <div><span class="welcome-kicker">EVERY JOURNEY, WELL COORDINATED</span><h2>On the move. In sync.</h2><p>From the first pickup to the last drop-off, stay connected to your entire school fleet.</p></div>
+            <div class="welcome-art route-art" aria-hidden="true"><div class="route-map"><i></i><i></i><i></i><b></b><span>⌖</span></div><div class="route-bus">▰</div><i class="art-spark spark-a">✦</i><i class="art-spark spark-b">✳</i></div>
+            <div class="school-year"><span>FLEET STATUS</span><b>Morning run</b><small><i class="fleet-live"></i> Operations in progress</small></div>
+          </section>
+
+          <section class="metric-grid" aria-label="Transport statistics">
+            <article class="metric-card"><span class="metric-icon purple">▣</span><span class="metric-label">Total vehicles</span><strong>18</strong><small><b class="positive">16 active</b> <span>2 in service</span></small><div class="metric-spark purple-spark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article class="metric-card"><span class="metric-icon blue">⌖</span><span class="metric-label">Active routes</span><strong>12</strong><small><b class="positive">10 on time</b> <span>2 approaching</span></small><div class="metric-spark blue-spark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article class="metric-card"><span class="metric-icon orange">♙</span><span class="metric-label">Students allocated</span><strong>624</strong><small><b class="neutral">48.6%</b> <span>of total students</span></small><div class="metric-spark orange-spark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+            <article class="metric-card"><span class="metric-icon green">◷</span><span class="metric-label">On-time arrivals</span><strong>94.2<small>%</small></strong><small><b class="positive">↑ 3.1%</b> <span>this month</span></small><div class="metric-spark green-spark"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div></article>
+          </section>
+
+          <section class="dashboard-columns">
+            <article class="panel routes-panel" id="routes">
+              <div class="panel-heading"><div><h2>Route activity</h2><p>Live overview of this morning’s routes</p></div><span class="live-pill"><i></i> LIVE</span></div>
+              <div class="route-map-large" role="img" aria-label="Illustrative map showing three school bus routes"><div class="map-road road-one"></div><div class="map-road road-two"></div><div class="map-road road-three"></div><svg viewBox="0 0 600 230" preserveAspectRatio="none" aria-hidden="true"><path class="route-line route-one" d="M75 165 C145 165 130 65 235 85 S350 190 420 125 485 70 535 65"/><path class="route-line route-two" d="M90 55 C150 80 165 165 255 145 S355 58 435 88 505 160 555 175"/><path class="route-line route-three" d="M65 120 C155 120 190 35 285 55 S380 165 475 135"/></svg><i class="map-stop stop-one"></i><i class="map-stop stop-two"></i><i class="map-stop stop-three"></i><i class="map-stop stop-four"></i><span class="map-campus">NORTHSTAR<br />CAMPUS</span><span class="bus-marker bus-one">▰</span><span class="bus-marker bus-two">▰</span><span class="map-label label-one">ROUTE 04</span><span class="map-label label-two">ROUTE 08</span></div>
+              <div class="route-legend"><span><i class="legend-teal"></i> Route 04 <b>On time</b></span><span><i class="legend-violet"></i> Route 08 <b>On time</b></span><a href="#vehicles">View all routes <span>↗</span></a></div>
+            </article>
+            <article class="panel fleet-panel" id="vehicles">
+              <div class="panel-heading"><div><h2>Fleet status</h2><p>Vehicle readiness today</p></div><a class="panel-more" href="#vehicles" aria-label="More vehicle options">···</a></div>
+              <div class="fleet-total"><div class="fleet-ring"><span><b>18</b><small>vehicles</small></span></div><div class="fleet-legend"><span><i class="legend-teal"></i><b>16</b> Active</span><span><i class="legend-amber"></i><b>2</b> In service</span></div></div>
+              <div class="vehicle-highlight"><span class="vehicle-icon">▰</span><div><b>Next departure</b><small>Route 04 · Vehicle 08</small></div><span class="departure-time">08:45 <small>AM</small></span></div>
+              <div class="driver-mini" id="staff"><span class="driver-avatar">RK</span><span><b>Rajesh Kumar</b><small>Assigned driver · 24 students</small></span><span class="driver-status"><i></i> Ready</span></div>
+            </article>
+          </section>
+
+          <section class="panel routes-table-panel" id="allocations">
+            <div class="panel-heading"><div><h2>Today’s route schedule & stop tracking</h2><p>Pickup and drop-off operations · Morning shift</p></div><a class="table-link" href="index.html#contact">Manage allocations <span>↗</span></a></div>
+            <div class="table-scroll"><table><thead><tr><th>ROUTE / VEHICLE</th><th>DRIVER</th><th>STUDENTS</th><th>NEXT STOP / ETA</th><th>STATUS</th></tr></thead><tbody><tr><td><span class="route-cell"><i class="route-badge badge-teal">04</i><span><b>North District</b><small>Bus · KA 03 AB 4821</small></span></span></td><td><span class="driver-cell"><i class="student-avatar avatar-lavender">RK</i> Rajesh Kumar</span></td><td>24 students</td><td>Green Park · Pickup · 08:45 AM</td><td><span class="status-pill status-active">On schedule</span></td></tr><tr><td><span class="route-cell"><i class="route-badge badge-violet">08</i><span><b>Lakeview Circle</b><small>Bus · KA 03 CD 1936</small></span></span></td><td><span class="driver-cell"><i class="student-avatar avatar-peach">SP</i> Sunil Patel</span></td><td>31 students</td><td>Lakeview · Pickup · 08:52 AM</td><td><span class="status-pill status-active">On schedule</span></td></tr><tr><td><span class="route-cell"><i class="route-badge badge-orange">11</i><span><b>Central Avenue</b><small>Bus · KA 03 EF 7254</small></span></span></td><td><span class="driver-cell"><i class="student-avatar avatar-mint">AM</i> Anita Menon</span></td><td>19 students</td><td>City Library · Drop-off · 09:05 AM</td><td><span class="status-pill status-review">Approaching</span></td></tr></tbody></table></div>
+          </section>
+          <p class="dashboard-disclaimer">Concept dashboard · Routes, names, and vehicle details shown are illustrative demo data.</p>
+        </div>
+      </main>
+    </div>
+    <dialog class="record-dialog" id="record-dialog" aria-label="Manage transport record"></dialog>
+  </body>
+</html>

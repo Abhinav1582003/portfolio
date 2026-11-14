@@ -80,7 +80,7 @@ contactForm.addEventListener("submit", async (event) => {
   const templateParams = {
     from_name: formData.get("name"),
     reply_to: formData.get("email"),
-    business_name: formData.get("business"),
+    phone_number: formData.get("phone"),
     project_type: formData.get("project"),
     message: formData.get("message") || "No additional project details provided.",
   };
